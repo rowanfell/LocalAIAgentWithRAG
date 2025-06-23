@@ -8,3 +8,6 @@ wheels/
 
 # Virtual environments
 .venv
+
+# vector db
+chrome_langchain_db/
