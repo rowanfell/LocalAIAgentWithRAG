@@ -1,8 +1,9 @@
+# %%
 from langchain_ollama.llms import OllamaLLM
 from langchain_core.prompts import ChatPromptTemplate
 from vector import retriever
 
-model = OllamaLLM(model="llama3.2")
+model = OllamaLLM(model="llama3:8b")
 
 template = """
 You are an exeprt in answering questions about a pizza restaurant
@@ -24,3 +25,4 @@ while True:
     reviews = retriever.invoke(question)
     result = chain.invoke({"reviews": reviews, "question": question})
     print(result)
+# %%
